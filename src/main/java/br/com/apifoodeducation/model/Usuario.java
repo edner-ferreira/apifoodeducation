@@ -1,6 +1,7 @@
 package br.com.apifoodeducation.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public abstract class Usuario implements Serializable {
 	private String senha;
 	private int idade;
 	private String sexo;
+	private Date dataNascimento;
 	
 //	@OneToMany(mappedBy="usuario")
 //	private  List<Alimento> alimentos;
@@ -92,6 +94,15 @@ public abstract class Usuario implements Serializable {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
 	//	public List<Alimento> getAlimentos() {
 //		return alimentos;
 //	}
